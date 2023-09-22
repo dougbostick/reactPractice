@@ -18,6 +18,8 @@ column {
   border: 1px solid black;
   /* width: calc(100% / 3); */
   width: 50%;
+
+  font-size: 18px;
 }
 
 table {
@@ -26,6 +28,17 @@ table {
   display: flex;
   flex-direction: column;
 }
+
+input,
+button {
+  padding: 4px;
+  font-size: 18px;
+  margin: 8px;
+}
+
+/* input {
+  padding-bottom: 2px;
+} */
 
 .App-logo {
   height: 40vmin;

@@ -17,8 +17,16 @@ function App() {
     <div className="App">
       <h1>React Form</h1>
       <form onSubmit={handleSubmit}>
-        <input value={first} onChange={(e) => setFirst(e.target.value)} />
-        <input value={last} onChange={(e) => setLast(e.target.value)} />
+        <input
+          placeholder={'first name...'}
+          value={first}
+          onChange={(e) => setFirst(e.target.value)}
+        />
+        <input
+          placeholder={'last name...'}
+          value={last}
+          onChange={(e) => setLast(e.target.value)}
+        />
         <button type="submit">Submit</button>
       </form>
       <table>
