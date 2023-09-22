@@ -8,7 +8,7 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setUserList([...userList, [last, first]]);
+    setUserList([...userList, [first, last]]);
     setFirst('');
     setLast('');
   };
@@ -21,18 +21,19 @@ function App() {
         <input value={last} onChange={(e) => setLast(e.target.value)} />
         <button type="submit">Submit</button>
       </form>
-      <div>
+      <table>
+        <row>
+          <column>First</column>
+          <column>Last</column>
+        </row>
         {userList.map((user) => {
           return (
-            <div>
-              {user[0]} {user[1]}{' '}
-            </div>
+            <row>
+              <column>{user[0]}</column>
+              <column>{user[1]}</column>
+            </row>
           );
         })}
-      </div>
-      <table>
-        <column>First</column>
-        <column>Last</column>
 
         {/* <row>First</row>
         <row>Last</row> */}
