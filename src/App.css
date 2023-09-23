@@ -18,12 +18,11 @@ column {
   border: 1px solid black;
   /* width: calc(100% / 3); */
   width: 50%;
-
   font-size: 18px;
 }
 
 table {
-  width: 60%;
+  width: 80%;
   /* border: 1px solid black; */
   display: flex;
   flex-direction: column;
