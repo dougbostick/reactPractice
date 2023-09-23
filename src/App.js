@@ -5,14 +5,26 @@ function App() {
   const [first, setFirst] = useState('');
   const [last, setLast] = useState('');
   const [email, setEmail] = useState('');
+  const [error, setError] = useState('');
   const [userList, setUserList] = useState([]);
+
+  const myReg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!first || !last || !email) {
+      setError('Please fill out all fields');
+      return;
+    }
+    if (!myReg.test(email)) {
+      setError('Please use a valid email');
+      return;
+    }
     setUserList([...userList, { first, last, email }]);
     setFirst('');
     setLast('');
     setEmail('');
+    setError('');
   };
 
   const handleRemove = (target) => {
@@ -23,6 +35,7 @@ function App() {
   return (
     <div className="App">
       <h1>React Form</h1>
+      <h3>{error}</h3>
       <form onSubmit={handleSubmit}>
         <input
           placeholder={'first name...'}

@@ -6,6 +6,12 @@
   justify-content: center;
 }
 
+h3 {
+  height: 12px;
+  color: red;
+  font-weight: bold;
+}
+
 form {
   margin: 18px;
 }
